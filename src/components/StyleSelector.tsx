@@ -1,7 +1,6 @@
 import type React from "react";
 import type { QRCodeStyle, QRStyleName } from "../types/qr-code";
 import ColorPicker from "./ColorPicker";
-import QRStyleSelector from "./QrStyle";
 import { Label } from "./ui/label";
 
 interface StyleSelectorProps {
@@ -18,8 +17,6 @@ export default function StyleSelector({
   selectedStyle,
   onStyleSelect,
   onCustomStyleChange,
-  qrStyle,
-  onQRStyle,
 }: StyleSelectorProps) {
   return (
     <div className="mb-6 space-y-4">
@@ -46,10 +43,6 @@ export default function StyleSelector({
             </button>
           ))}
         </div>
-      </div>
-
-      <div className="pt-4 border-t">
-        <QRStyleSelector selectedStyle={qrStyle} onSelectedStyle={onQRStyle} />
       </div>
 
       <div className="pt-4 border-t">
